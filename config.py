@@ -1,5 +1,7 @@
 """
+
 The required configurations for training phase ('prepare_Data.py', 'train.py').
+
 """
 
 cfg = dict()
@@ -22,7 +24,7 @@ The path to all brain volumes (ex: suppose we have a folder 'MICCAI_BraTS_2019_D
 that contains two HGG and LGG folders so:
 data_dir='./MICCAI_BraTS_2019_Data_Training/*/*')
 """
-cfg['data_dir']              = '/path/to/data/'
+cfg['data_dir']              = 'data/MICCAI_BraTS_2019_Data_Training/HGG/BraTS19_2013_2_1'
 
 
 
@@ -153,3 +155,5 @@ If specified, before training, the model weights will be loaded from this path o
 the model will be trained from scratch.
 """
 cfg['load_model_dir']        = None 
+
+ 

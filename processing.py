@@ -32,6 +32,7 @@ def read_brain(brain_dir, mode='train', x0=42, x1=194, y0=29, y1=221, z0=2, z1=1
         The affine matrix of the input brain volume
     brain_name : str
         The name of the input brain volume
+
     """
     
     brain_dir = os.path.normpath(brain_dir)
@@ -45,7 +46,7 @@ def read_brain(brain_dir, mode='train', x0=42, x1=194, y0=29, y1=221, z0=2, z1=1
         modalities_dir = [flair[0], t1[0], t1ce[0], t2[0], gt[0]]
         
     elif mode=='validation':
-        modalities_dir = [flair[0], t1[0], t1ce[0], t2[0]]   
+        modalities_dir = [flair[258], t1[258], t1ce[258], t2[258]]   
     
     all_modalities = []    
     for modality in modalities_dir:      
@@ -90,9 +91,11 @@ def create_table(dataset_dir, table_data_shape, save_dir, crop_coordinates, data
         k-fold cross-validation
         if specified, k .npy files will be saved. Each of these files shows the indexes of 
         brain volumes in that fold, which will be used for training the model.
+
     Returns
     -------
     None
+
     """
     
     all_brains_dir = glob(dataset_dir)
@@ -159,3 +162,5 @@ if __name__ == '__main__':
       
     create_table(cfg['data_dir'], cfg['table_data_shape'], cfg['save_data_dir'], 
                  cfg['crop_coord'], cfg['data_channels'], cfg['k_fold'])
+    
+

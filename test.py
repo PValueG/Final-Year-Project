@@ -102,8 +102,8 @@ def normalize_volume(input_volume):
 def save_predicted_results(prediction, brain_affine, view, output_dir,  z_main=155, z0=2, z1=146, y_main=240, y0=29, y1=221, x_main=240, x0=42, x1=194):
     
     """
-    Save the segmented results into a .nii.gz file, so that it can be uploaded to the BraTS server.
-    Note that to correctly save the segmented brains, it is necessery to set x0, x1, ... correctly.
+    Save the segmented results into a .nii.gz file,
+
     
     Parameters
     ----------
